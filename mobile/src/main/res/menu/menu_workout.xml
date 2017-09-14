@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".workout.WorkoutActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/save_template"
+        android:orderInCategory="100"
+        android:title="Save template"/>
+    <item
+        android:id="@+id/change_workout"
+        android:orderInCategory="100"
+        android:title="Change Workout"/>
+</menu>

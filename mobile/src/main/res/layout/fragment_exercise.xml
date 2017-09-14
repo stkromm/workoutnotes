@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/root_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/exercise_status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Performing"/>
+
+    <View
+        android:id="@+id/SplitLine_hor1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/panel_margin"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:background="#E0E0E0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/icon_chest"
+            app:civ_border_color="#E0E0E0"
+            app:civ_border_width="1dp"/>
+
+        <Space
+            android:layout_width="@dimen/exercise_label_value_space"
+            android:layout_height="20px"/>
+
+        <LinearLayout
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benchpress"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textSize="@dimen/exercise_name_font_size"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/exercise_sets_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercise_sets"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="@dimen/exercise_details_font_size"
+                    android:textStyle="bold"/>
+
+                <Space
+                    android:layout_width="@dimen/exercise_label_value_space"
+                    android:layout_height="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/exercise_number_sets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="@dimen/exercise_details_font_size"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/exercise_sets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/exercise_add_set"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add set"/>
+
+                <Space
+                    android:id="@+id/space"
+                    android:layout_width="fill_parent"
+                    android:layout_height="180dp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/exercise_skip_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_exercise_skip"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                app:backgroundTint="@color/colorPrimary"/>
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/exercise_finish_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/action_exercise_done"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
